@@ -5,22 +5,6 @@ export default function Home() {
   return (
 
     <>
-
-    <Head>
-    <title>CrimpByte - Innovating Technology Solutions</title>
-        <meta name="description" content="CrimpByte offers cutting-edge technology solutions to drive your business forward. Discover our innovative services and products." />
-        <meta name="keywords" content="CrimpByte, technology solutions, innovative tech, business solutions" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.crimpbyte.com" />
-        <meta property="og:title" content="CrimpByte - Innovating Technology Solutions" />
-        <meta property="og:description" content="CrimpByte offers cutting-edge technology solutions to drive your business forward. Discover our innovative services and products." />
-        <meta property="og:url" content="https://www.crimpbyte.com" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.crimpbyte.com/heroimage.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-      
-    </Head>
     <main>
        <div>
       {/* Navbar */}

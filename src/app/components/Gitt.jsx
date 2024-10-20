@@ -8,7 +8,7 @@ function Gitt() {
       {/* Text Section */}
       <div className="flex flex-col gap-4 text-center md:text-left mb-8 md:mb-0">
         <span className="font-optima font-semibold text-3xl md:text-5xl">Get in Touch Today!</span>
-        <p className="font-opensans font-normal text-base md:text-xl">Let's transform your ideas into outstanding digital experiences.</p>
+        <p className="font-opensans font-normal text-base md:text-xl">Let Us transform your ideas into outstanding digital experiences.</p>
         <div className="flex flex-col md:flex-row items-center gap-4">
           <input
             placeholder="Enter your Email"

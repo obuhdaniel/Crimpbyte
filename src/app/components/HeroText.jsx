@@ -1,15 +1,17 @@
-import React from 'react';
+import React from "react";
 import OrangeButton from "./yellow";
 import WithIcon from "./fancyButtons/WithIcon";
+import Image from "next/image";
 
 function HeroText() {
   return (
     <div className="min-h-screen w-full flex flex-col items-center py-10 md:py-16 gap-4">
-      <div className="bg-yellow-300 text-black py-2 text-center font-opensans">
-      <span className="font-semibold text-lg">
-        🚧 This page is currently under construction. Please check back later! 🚧
-      </span>
-    </div>
+      {/* <div className="bg-yellow-300 text-black py-2 text-center font-opensans">
+        <span className="font-semibold text-lg">
+          🚧 This page is currently under construction. Please check back later!
+          🚧
+        </span>
+      </div> */}
       {/* Top Icons Section */}
       <div className="w-full max-w-5xl px-6 md:px-10">
         <div className="flex flex-wrap justify-between gap-4">
@@ -27,7 +29,9 @@ function HeroText() {
           Transforming industries through <br /> advanced technology solutions
         </h1>
         <p className="font-opensans text-base md:text-xl mt-4">
-          Empowering Your Brand with Innovative Digital Solutions Tailored to Elevate Engagement, <br /> Drive Growth, and Achieve your unique Business Goals.
+          Empowering Your Brand with Innovative Digital Solutions Tailored to
+          Elevate Engagement, <br /> Drive Growth, and Achieve your unique
+          Business Goals.
         </p>
       </div>
 
@@ -44,6 +48,12 @@ function HeroText() {
           <WithIcon text="IOT" style="border-orange-500" />
         </div>
       </div>
+
+      <div className="flex flex-wrap justify-center gap-6 my-10 mx-5 bg-white h-6 w-3/4 rounded-lg p-5 md:mx-10 md:px-20 md:justify-between">
+        
+      </div>
+
+      <Image src="/line.png" width="1500" height="0" alt="" className="my-20" />
     </div>
   );
 }

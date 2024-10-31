@@ -2,6 +2,7 @@ import React from 'react';
 import NoIcon from "../components/fancyButtons/NoIcon";
 import WwoCardsSimple from './WwoCardsSimple';
 import SeeMore from "./fancyButtons/SeeMore";
+import Image from 'next/image';
 
 function Wwo() {
   return (
@@ -13,6 +14,16 @@ function Wwo() {
       </p>
       <WwoCardsSimple />
       <SeeMore />
+
+      <Image
+        src="/line.png"
+        width="1500"
+        height="0"
+        alt=''
+
+        className='my-20'
+
+        />
     </div>
   );
 }

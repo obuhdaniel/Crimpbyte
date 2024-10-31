@@ -1,60 +1,58 @@
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
-const svgColors = [
-  "text-yellow-500",  // Yellow for the first card
-  "text-blue-500",    // Blue for the second card
-  "text-orange-500",  // Orange for the third card
-];
-
-function WwoCardsSimple() {
+const WwoCardsSimple = () => {
   const cards = [
     {
       title: "Mobile Application Development",
       content:
         "Crimplyte’s mobile app development services focus on creating high-quality, user-centric applications for both iOS and Android platforms.",
+      image: "/purple-fan.png",
     },
     {
       title: "Web Development",
       content:
         "Crimplyte’s web development services encompass a comprehensive range of offerings to build robust and dynamic websites.",
+      image: "/yellow-fan.png",
     },
     {
       title: "UI/UX Design Services",
       content:
         "Crimplyte Technology offers a range of UI/UX design services aimed at creating exceptional user experiences.",
+      image: "/orange-fan.png",
     },
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-10 lg:px-8 lg:py-16">
+    <div className="max-w-7xl mx-auto px-4 py-10 lg:px-8 lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {cards.map((card, index) => (
           <div
             key={index}
-            className="relative bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow"
+            className="relative flex flex-col h-full p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow border border-gray-200 hover:border-gray-300"
           >
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">
               {card.title}
             </h3>
-            <p className="text-base md:text-lg text-gray-800 font-normal">
+            <p className="text-base text-gray-700 leading-relaxed mb-8 flex-grow">
               {card.content}
             </p>
-            {/* Bottom-right SVG Accent */}
-            <div className={`absolute bottom-4 right-4 ${svgColors[index % 3]}`}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="w-6 h-6"
-              >
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-              </svg>
+
+            {/* Decorative Image Positioned Fully Outside the Card */}
+            <div className="absolute bottom-0 right-0 transform translate-x-8 translate-y-8">
+              <Image
+                src={card.image}
+                width={50}
+                height={50}
+                alt={`${card.title} icon`}
+                className=""
+              />
             </div>
           </div>
         ))}
       </div>
     </div>
   );
-}
+};
 
 export default WwoCardsSimple;

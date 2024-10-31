@@ -7,6 +7,7 @@ import NoIcon from "../components/fancyButtons/NoIcon";
 import SeeMore from "./fancyButtons/SeeMore";
 import WcuCards from './WCU/WcuCards';
 
+
 function Wcu() {
   return (
     <div className='flex flex-col items-center text-center py-40 gap-3'>
@@ -21,6 +22,11 @@ function Wcu() {
 
 
         <SeeMore/>
+
+       
+
+
+        
 
         
 

@@ -6,11 +6,12 @@ import React from 'react'
 import NoIcon from "../components/fancyButtons/NoIcon";
 import SeeMore from "./fancyButtons/SeeMore";
 import WcuCards from './WCU/WcuCards';
+import Link from 'next/link';
 
 
 function Wcu() {
   return (
-    <div className='flex flex-col items-center text-center py-40 gap-3'>
+    <div className='flex flex-col items-center text-center py-10 gap-3'>
         <NoIcon
         text="Why choose Us"
         />
@@ -21,7 +22,9 @@ function Wcu() {
         <WcuCards/>
 
 
-        <SeeMore/>
+        <Link href="/about">
+        <SeeMore />
+      </Link>
 
        
 

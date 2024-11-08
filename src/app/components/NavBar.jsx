@@ -1,17 +1,17 @@
-"use client"
+'use client'
 
 import React, { useState } from 'react';
 import OrangeButton from "./yellow";
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const router = useRouter();
+  const pathname = usePathname();
 
   // Function to check if the link is active
-  const isActive = (path) => router.pathname === path;
+  const isActive = (path) => pathname === path;
 
   return (
     <div>
@@ -25,26 +25,13 @@ function NavBar() {
         {/* Desktop Menu */}
         <div className="hidden lg:flex">
           <ul className="flex flex-row gap-6 items-center">
-            <li>
-              <Link href="/" className={`${isActive('/') ? 'underline decoration-orange-300 font-bold underline-offset-2' : ''}`}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/services" className={`${isActive('/services') ? 'underline decoration-orange-300 font-bold underline-offset-2' : ''}`}>
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link href="/portfolio" className={`${isActive('/portfolio') ? 'underline decoration-orange-300 font-bold underline-offset-2' : ''}`}>
-                Portfolio
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className={`${isActive('/about') ? 'underline decoration-orange-300 font-bold underline-offset-2' : ''}`}>
-                About Us
-              </Link>
-            </li>
+            {['/', '/services', '/portfolio', '/about'].map((path, index) => (
+              <li key={index}>
+                <Link href={path} className={`pb-2 ${isActive(path) ? 'border-b-2 border-orange-300 font-bold' : ''} hover:border-b-2 hover:border-gray-300 transition-all duration-300`}>
+                  {path === '/' ? 'Home' : path.substring(1).charAt(0).toUpperCase() + path.slice(2)}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -67,26 +54,13 @@ function NavBar() {
       {menuOpen && (
         <div className="lg:hidden bg-white px-6 py-4">
           <ul className="flex flex-col gap-4">
-            <li>
-              <Link href="/" className={`${isActive('/') ? 'underline decoration-orange-300 font-bold underline-offset-2' : ''}`} onClick={() => setMenuOpen(false)}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/services" className={`${isActive('/services') ? 'underline decoration-orange-300 font-bold underline-offset-2' : ''}`} onClick={() => setMenuOpen(false)}>
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link href="/portfolio" className={`${isActive('/portfolio') ? 'underline decoration-orange-300 font-bold underline-offset-2' : ''}`} onClick={() => setMenuOpen(false)}>
-                Portfolio
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className={`${isActive('/about') ? 'underline decoration-orange-300 font-bold underline-offset-2' : ''}`} onClick={() => setMenuOpen(false)}>
-                About Us
-              </Link>
-            </li>
+            {['/', '/services', '/portfolio', '/about'].map((path, index) => (
+              <li key={index}>
+                <Link href={path} className={`pb-2 ${isActive(path) ? 'border-b-2 border-orange-300 font-bold' : ''} hover:border-b-2 hover:border-gray-300 transition-all duration-300`} onClick={() => setMenuOpen(false)}>
+                  {path === '/' ? 'Home' : path.substring(1).charAt(0).toUpperCase() + path.slice(2)}
+                </Link>
+              </li>
+            ))}
             <li>
               <Link href="/contact" onClick={() => setMenuOpen(false)}>
                 <OrangeButton buttonText='Contact Us' />

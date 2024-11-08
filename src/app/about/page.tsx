@@ -15,7 +15,7 @@ function PortfolioPage() {
       </p>
     </div>
 
-
+    <WwoCards/>
     <Gitt/>
     <Footer/>
     </>

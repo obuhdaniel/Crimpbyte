@@ -33,7 +33,7 @@ function Gitt() {
             </svg>
           </div>
           <h2 className="text-2xl font-semibold text-green-500">Thanks for reaching out!</h2>
-          <p className="text-lg text-gray-600">We'll get back to you soon.</p>
+          <p className="text-lg text-gray-600">We&apos;ll get back to you soon.</p>
         </div>
       </div>
     );
@@ -43,7 +43,7 @@ function Gitt() {
     <div className="flex flex-col md:flex-row justify-between items-center bg-black text-white p-10 md:px-20">
       {/* Text Section */}
       <div className="flex flex-col gap-4 text-center md:text-left mb-8 md:mb-0">
-        <span className="font-optima font-semibold text-3xl md:text-5xl">Get in Touch Today!</span>
+        <span className="font-optima font-semibold text-3xl md:text-5xl">Get  in Touch Today!</span>
         <p className="font-opensans font-normal text-base md:text-xl">Let Us transform your ideas into outstanding digital experiences.</p>
         
         {/* Form Section */}

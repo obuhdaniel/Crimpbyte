@@ -35,7 +35,7 @@ function PortfolioPage() {
             </svg>
           </div>
           <h2 className="text-2xl font-semibold text-green-500">Thanks for reaching out!</h2>
-          <p className="text-lg text-gray-600">We'll get back to you soon.</p>
+          <p className="text-lg text-gray-600">We&apos;ll get back to you soon.</p>
           <p className="mt-4 text-sm text-gray-500">You are being redirected to the homepage...</p>
         </div>
       </div>
@@ -48,7 +48,7 @@ function PortfolioPage() {
       <div className="flex flex-col items-start max-w-4xl mx-auto p-6 bg-white rounded-lg space-y-4">
         <h1 className="text-3xl font-bold text-gray-800">Contact Crimpbyte</h1>
         <p className="text-gray-700 leading-relaxed">
-          Have Questions or Need Assistance? We're Just a Message Away! Our Team
+          Have Questions or Need Assistance? We&apos;re Just a Message Away! Our Team
           is Dedicated to Providing You with Prompt and Helpful Support—Reach
           Out to Us Anytime!
         </p>
@@ -66,7 +66,7 @@ function PortfolioPage() {
                 type="text"
                 id="name"
                 placeholder="Your Name"
-                name="name" // Ensuring it's included in the form data
+                name="name" 
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
                 required
               />
@@ -80,7 +80,7 @@ function PortfolioPage() {
                 type="email"
                 id="email"
                 placeholder="Your Email"
-                name="email" // Ensuring it's included in the form data
+                name="email" 
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
                 required
               />
@@ -106,7 +106,7 @@ function PortfolioPage() {
                 type="text"
                 id="budget"
                 placeholder="Budget"
-                name="budget" // Ensuring it's included in the form data
+                name="budget" 
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
                 required
               />
@@ -119,7 +119,7 @@ function PortfolioPage() {
               <textarea
                 id="message"
                 placeholder="Message"
-                name="message" // Ensuring it's included in the form data
+                name="message" 
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 h-32 resize-none"
                 required
               ></textarea>

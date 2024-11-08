@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar';
 import Gitt from '../components/Gitt';
 import Footer from '../components/Footer';
 import WwoCards from '../components/WwoCards';
+import Wwo2 from '../components/Wwo2';
 function PortfolioPage() {
   return (
     <>
@@ -15,7 +16,7 @@ function PortfolioPage() {
       </p>
     </div>
 
-    <WwoCards/>
+    <Wwo2/>
     <Gitt/>
     <Footer/>
     </>

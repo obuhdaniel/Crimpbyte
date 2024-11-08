@@ -1,5 +1,6 @@
 
-import React from 'react'
+import React from 'react';
+import Image from 'next/image';
 
 const svgColors = [
     "text-yellow-500", // Yellow SVG for the first row

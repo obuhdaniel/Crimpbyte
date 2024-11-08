@@ -4,6 +4,7 @@ import Gitt from '../components/Gitt';
 import Footer from '../components/Footer';
 import WwoCards from '../components/WwoCards';
 import Wwo2 from '../components/Wwo2';
+import Portfolio from '../components/Portfolio';
 function PortfolioPage() {
   return (
     <>
@@ -17,6 +18,7 @@ function PortfolioPage() {
     </div>
 
     <Wwo2/>
+    <Portfolio/>
     <Gitt/>
     <Footer/>
     </>

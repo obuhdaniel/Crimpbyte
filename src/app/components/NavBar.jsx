@@ -16,7 +16,7 @@ function NavBar() {
   return (
     <div>
       {/* Navbar */}
-      <nav className="bg-white p-4 border-b-2 border-gray-200 flex justify-between items-center px-6 lg:px-10 font-opensans">
+      <nav className="bg-primaryWhite  border-b-2 border-gray-200 flex justify-between items-center px-6 lg:px-10 font-opensans">
         {/* Logo */}
         <div>
           <Image src='/logo.png' alt='Logo' width={50} height={50} />
@@ -45,14 +45,14 @@ function NavBar() {
         {/* Mobile Menu Toggle Button */}
         <div className="lg:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)} className="text-gray-600">
-            {menuOpen ? 'Close' : 'Menu'}
+            {menuOpen ? 'Close' : <Image src='/menu.png' width={30} height={30} alt='menu icon' />}
           </button>
         </div>
       </nav>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-white px-6 py-4">
+        <div className="lg:hidden bg-primaryWhite px-6 py-4">
           <ul className="flex flex-col gap-4">
             {['/', '/services', '/portfolio', '/about'].map((path, index) => (
               <li key={index}>

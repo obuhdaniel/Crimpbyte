@@ -85,7 +85,7 @@ function WwoCards() {
                 {card.content}
               </p>
   
-              {/* Decorative Image Positioned Fully Outside the Card */}
+           
               <div className="absolute bottom-0 right-0 transform translate-x-8 translate-y-8">
                 <Image
                   src={card.image}

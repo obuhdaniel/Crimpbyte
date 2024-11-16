@@ -1,26 +1,24 @@
 'use client'
 
 import React, { useState, useEffect} from "react";
-import NavBar from "../components/NavBar";
 import Gitt from "../components/Gitt";
-import Footer from "../components/Footer";
 import Image from "next/image";
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
 import { useForm, ValidationError } from '@formspree/react';
 import { useRouter } from 'next/navigation';
 function PortfolioPage() {
-  // Initialize formspree hook
+  
   const [state, handleSubmit] = useForm("xldebkyw");
   const router = useRouter();
  
   useEffect(() => {
     if (state.succeeded) {
       const timer = setTimeout(() => {
-        router.push('/'); // Redirect to homepage after 3 seconds
-      }, 3000); // 3 seconds delay for the message
+        router.push('/'); 
+      }, 3000); 
 
-      return () => clearTimeout(timer); // Cleanup timeout on unmount
+      return () => clearTimeout(timer); 
     }
   }, [state.succeeded, router]);
 
@@ -44,7 +42,6 @@ function PortfolioPage() {
 
   return (
     <>
-      <NavBar />
       <div className="flex flex-col items-start max-w-4xl mx-auto p-6 bg-white rounded-lg space-y-4">
         <h1 className="text-3xl font-bold text-gray-800">Contact Crimpbyte</h1>
         <p className="text-gray-700 leading-relaxed">
@@ -54,12 +51,12 @@ function PortfolioPage() {
         </p>
       </div>
 
-      {/* Form and Image Section */}
+      
       <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8 p-8 bg-white rounded-lg max-w-5xl mx-auto">
-        {/* Form Section */}
+        
         <div className="w-full md:w-1/2 bg-white p-6 rounded-lg">
           <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Name Field */}
+            
             <div>
               <label htmlFor="name" className="block text-gray-600">Your Name</label>
               <input
@@ -73,7 +70,7 @@ function PortfolioPage() {
               <ValidationError prefix="Name" field="name" errors={state.errors} />
             </div>
 
-            {/* Email Field */}
+           
             <div>
               <label htmlFor="email" className="block text-gray-600">Your Email</label>
               <input
@@ -87,19 +84,18 @@ function PortfolioPage() {
               <ValidationError prefix="Email" field="email" errors={state.errors} />
             </div>
 
-            {/* Phone Field */}
+           
             <div>
               <label htmlFor="phone" className="block text-gray-600">Phone Number</label>
               <PhoneInput
-                name="phone" // Ensure it’s included in the form data
-                defaultCountry="ng" // Set default country (Nigeria)
+                name="phone" 
+                defaultCountry="ng" 
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
                 required
               />
               <ValidationError prefix="Phone" field="phone" errors={state.errors} />
             </div>
 
-            {/* Budget Field */}
             <div>
               <label htmlFor="budget" className="block text-gray-600">Budget</label>
               <input
@@ -113,7 +109,7 @@ function PortfolioPage() {
               <ValidationError prefix="Budget" field="budget" errors={state.errors} />
             </div>
 
-            {/* Message Field */}
+  
             <div>
               <label htmlFor="message" className="block text-gray-600">Message</label>
               <textarea
@@ -126,11 +122,11 @@ function PortfolioPage() {
               <ValidationError prefix="Message" field="message" errors={state.errors} />
             </div>
 
-            {/* Submit Button */}
+
             <button
               type="submit"
               className="w-full p-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors duration-300"
-              disabled={state.submitting} // Disable button during submission
+              disabled={state.submitting}
             >
               {state.submitting ? "Submitting..." : "Submit"}
 
@@ -139,7 +135,6 @@ function PortfolioPage() {
           </form>
         </div>
 
-        {/* Image Section */}
         <div className="w-full md:w-1/2 flex justify-center">
           <Image
             src="/34.png"
@@ -147,13 +142,12 @@ function PortfolioPage() {
             width={1200}
             height={600}
             className="rounded-lg object-cover w-full h-auto"
-            priority // Optimize the image load on the page
+            priority 
           />
         </div>
       </div>
 
       <Gitt />
-      <Footer />
     </>
   );
 }

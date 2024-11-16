@@ -29,21 +29,21 @@ const WwoCardsSimple = () => {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="relative flex flex-col h-full p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow border border-gray-200 hover:border-gray-300"
+            className="relative flex flex-col h-full px-4 py-2 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow border border-gray-200 hover:border-gray-300 opacity-40 hover:opacity-100"
           >
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
+            <h3 className="text-2xl text-start font-bold text-gray-800 mb-4">
               {card.title}
             </h3>
-            <p className="text-base text-gray-700 leading-relaxed mb-8 flex-grow">
+            <p className="text-base text-start text-gray-700 leading-relaxed mb-4 flex-grow">
               {card.content}
             </p>
 
-            {/* Decorative Image Positioned Fully Outside the Card */}
-            <div className="absolute bottom-0 right-0 transform translate-x-8 translate-y-8">
+
+            <div className="absolute bottom-0 right-0 transform translate-x-2 translate-y-2">
               <Image
                 src={card.image}
-                width={50}
-                height={50}
+                width={25}
+                height={25}
                 alt={`${card.title} icon`}
                 className=""
               />

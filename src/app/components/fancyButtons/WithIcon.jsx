@@ -5,7 +5,7 @@ function WithIcon({text, style}) {
     <div className="flex flex-col items-center gap-[2px]">
     {/* Top Gradient Line */}
     <svg
-      className="w-fit h-[1px]"
+      className="w-full h-[1px]"
       viewBox="0 0 500 10"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="none"
@@ -22,10 +22,9 @@ function WithIcon({text, style}) {
 
     {/* Icon and Text */}
     <div className="flex items-center gap-2">
-      {/* Icon (Orange Circle with Checkmark) */}
-      <div className={`w-5 h-5 border-[1px] rounded-full flex items-center justify-center ${style || ''}`}>
+      <div className={`w-3 h-3 border-[1px] rounded-full flex items-center justify-center ${style || ''}`}>
         <svg
-          className={`w-2 h-2 ${style}`}
+          className={`w-1 h-1 ${style}`}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="none"
@@ -38,13 +37,12 @@ function WithIcon({text, style}) {
         </svg>
       </div>
 
-      {/* Text */}
-      <span className="text-xs font-opensans">{text}</span>
+      <span className="text-[10px] py-1 sm:text-sm md:text-md lg:text-lg font-opensans">{text}</span>
     </div>
 
     {/* Bottom Gradient Line */}
     <svg
-      className="w-fit h-[1px]"
+      className="w-full h-[1px]"
       viewBox="0 0 500 10"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="none"

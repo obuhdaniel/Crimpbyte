@@ -16,6 +16,10 @@ const config: Config = {
       fontFamily: {
         optima : ["Optima Bold", "sans-serif"],
         opensans: ["Open Sans", "sans-serif"],
+      },
+      colors:{
+        primaryWhite: "#F2F2F2",
+        primaryTextGrey: "#454545"
       }
     },
   },

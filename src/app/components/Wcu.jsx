@@ -15,7 +15,7 @@ function Wcu() {
         <NoIcon
         text="Why choose Us"
         />
-        <span className='font-optima mt-5 text-3xl md:text-4xl'>Committed to your Success</span>
+        <span className='font-optima mt-5 mx-auto px-5 text-3xl md:text-4xl'>Committed to your Success</span>
         <p className='font-opensans text-lg md:text-xl max-w-3xl text-primaryTextGrey mx-auto w-[90%]'>We combine innovative design with cutting-edge technology to create custom 
         solutions that not only meet your needs but also exceed your expectations
         </p>

@@ -31,7 +31,14 @@ function NavBar() {
                   {path === '/' ? 'Home' : path.substring(1).charAt(0).toUpperCase() + path.slice(2)}
                 </Link>
               </li>
+
+              
             ))}
+            <li>
+            <Link href="https://africakabu.vercel.app/" onClick={() => setMenuOpen(false)}>
+                Kabu Kabu &trade;
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -54,17 +61,24 @@ function NavBar() {
       {menuOpen && (
         <div className="lg:hidden bg-primaryWhite px-6 py-4">
           <ul className="flex flex-col gap-4">
-            {['/', '/services', '/portfolio', '/about'].map((path, index) => (
+            {['/', '/services', '/portfolio', '/about', ].map((path, index) => (
               <li key={index}>
                 <Link href={path} className={`pb-2 ${isActive(path) ? 'border-b-2 border-orange-300 font-bold' : ''} hover:border-b-2 hover:border-gray-300 transition-all duration-300`} onClick={() => setMenuOpen(false)}>
                   {path === '/' ? 'Home' : path.substring(1).charAt(0).toUpperCase() + path.slice(2)}
                 </Link>
+                
               </li>
             ))}
+            <li>
+            <Link href="https://africakabu.vercel.app/" onClick={() => setMenuOpen(false)}>
+                Kabu Kabu &trade;
+              </Link>
+            </li>
             <li>
               <Link href="/contact" onClick={() => setMenuOpen(false)}>
                 <OrangeButton buttonText='Contact Us' />
               </Link>
+              
             </li>
           </ul>
         </div>

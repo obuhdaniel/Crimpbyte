@@ -8,7 +8,6 @@ import Portfolio from '../components/Portfolio';
 function PortfolioPage() {
   return (
     <>
-    <NavBar/>
 
     <div className="flex flex-col items-start max-w-4xl p-6 bg-white  rounded-lg space-y-4">
       <h1 className="text-3xl font-bold text-gray-800">The Crimpbyte Difference</h1>
@@ -20,7 +19,6 @@ function PortfolioPage() {
     <Wwo2/>
     <Portfolio/>
     <Gitt/>
-    <Footer/>
     </>
   );
 }

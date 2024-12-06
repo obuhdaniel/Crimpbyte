@@ -12,9 +12,10 @@ import Gitt from "../components/Gitt";
 
 function LandingPage() {
   return (
-    <main>
+    <main className='mx-auto overflow-clip'>
        <div className='bg-primaryWhite'>
  
+      
       
 
   

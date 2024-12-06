@@ -19,7 +19,7 @@ function NavBar() {
       <nav className="bg-primaryWhite  border-b-2 border-gray-200 flex justify-between items-center px-6 lg:px-10 font-opensans">
         {/* Logo */}
         <div>
-          <Image src='/logo.png' alt='Logo' width={50} height={50} />
+          <Image src='/logo.png' alt='Logo' width={30} height={30} />
         </div>
 
         {/* Desktop Menu */}
@@ -27,18 +27,14 @@ function NavBar() {
           <ul className="flex flex-row gap-6 items-center">
             {['/', '/services', '/portfolio', '/about'].map((path, index) => (
               <li key={index}>
-                <Link href={path} className={`pb-2 ${isActive(path) ? 'border-b-2 border-orange-300 font-bold' : ''} hover:border-b-2 hover:border-gray-300 transition-all duration-300`}>
+                <Link href={path} className={`pb-2 ${isActive(path) ? 'border-b-2 border-orange-300 ' : ''} hover:border-b-2 hover:border-gray-300 transition-all duration-300 text-[10px]`}>
                   {path === '/' ? 'Home' : path.substring(1).charAt(0).toUpperCase() + path.slice(2)}
                 </Link>
               </li>
 
               
             ))}
-            <li>
-            <Link href="https://africakabu.vercel.app/" onClick={() => setMenuOpen(false)}>
-                Kabu Kabu &trade;
-              </Link>
-            </li>
+           
           </ul>
         </div>
 

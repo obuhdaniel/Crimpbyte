@@ -1,6 +1,6 @@
 import React from 'react'
 
-function WithIcon({text, style}) {
+function WithIcon({text, style, stroke}) {
   return (
     <div className="flex flex-col items-center gap-[2px]">
     {/* Top Gradient Line */}
@@ -22,13 +22,13 @@ function WithIcon({text, style}) {
 
     {/* Icon and Text */}
     <div className="flex items-center gap-2">
-      <div className={`w-3 h-3 border-[1px] rounded-full flex items-center justify-center ${style || ''}`}>
+      <div className={`w-2 h-2 border-[1px] rounded-full flex items-center justify-center ${style || ''}`}>
         <svg
-          className={`w-1 h-1 ${style}`}
+          className={`w-1 h-1 bordeer-[1px]`}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
+          stroke={`${stroke}`}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -37,10 +37,8 @@ function WithIcon({text, style}) {
         </svg>
       </div>
 
-      <span className="text-[10px] py-1 sm:text-sm md:text-md lg:text-lg font-opensans">{text}</span>
+      <span className="py-1 text-[8px] md:text-md lg:text-lg font-opensans">{text}</span>
     </div>
-
-    {/* Bottom Gradient Line */}
     <svg
       className="w-full h-[1px]"
       viewBox="0 0 500 10"

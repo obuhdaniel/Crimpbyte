@@ -16,7 +16,7 @@ function Footer() {
   return (
     <div className="flex flex-col text-primaryTextGrey bg-[#F2F2F2]">
       {/* Social Icons */}
-      <div className="flex flex-wrap justify-center gap-6 my-10 mx-5 bg-white rounded-lg p-5 md:mx-10 md:px-20 md:justify-between">
+      <div className="flex flex-row justify-center gap-4 sm:gap-8 md:gap-10 lg:gap-14 my-10 mx-5 bg-white rounded-lg p-5 md:mx-10 md:px-10 md:justify-between">
         
         <a href="https://web.facebook.com/profile.php?id=61561635763286">
         <FaFacebook size={30} className="text-blue-600" />
@@ -32,7 +32,7 @@ function Footer() {
       </div>
 
       {/* Footer Sections */}
-      <div className="flex flex-col md:flex-row justify-evenly items-start gap-10 md:gap-0 px-5 md:px-10 py-10">
+      <div className="flex flex-col md:flex-row justify-evenly items-start gap-10  md:gap-0 px-5 md:px-10 py-10">
         {/* Logo and Branding */}
         <div className="flex flex-row lg:flex-col md:flex-row items-center gap-4">
           <div>

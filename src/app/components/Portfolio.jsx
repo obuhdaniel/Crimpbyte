@@ -14,7 +14,7 @@ function Portfolio() {
     <div className="flex flex-col items-center text-center py-20 gap-10 bg-black text-white">
       {/* Section Title */}
       <NoIcon text="Portfolio" />
-      <span className="font-optima text-4xl mb-6">
+      <span className="font-optima text-[22px] mb-6">
         A little exploration into our creativity
       </span>
 

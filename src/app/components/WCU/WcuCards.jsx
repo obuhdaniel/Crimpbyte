@@ -35,20 +35,21 @@ function WcuCards() {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="relative flex flex-col h-full px-4 py-2 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow border border-gray-200 hover:border-gray-300 opacity-40 hover:opacity-100"
+            className="relative flex flex-col h-full  py-4 pl-4 pr-11 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow border border-gray-200 hover:border-gray-300 opacity-40 hover:opacity-100"
           >
-            <h3 className="text-2xl text-start font-bold text-gray-800 mb-4">
+            <h3 className=" min-[320px]:text-[16px] text-[20px]  text-start font-medium text-gray-800 ">
               {card.title}
             </h3>
-            <p className="text-base text-start text-gray-700 leading-relaxed mb-4 flex-grow">
+            <p className="text-[18px] text-start text-gray-700 leading-relaxed mb-4 flex-grow">
               {card.content}
             </p>
 
-            <div className="absolute bottom-0 right-0 transform translate-x-4 translate-y-4">
+
+            <div className="absolute -bottom-3 right-1 transform translate-x-2 translate-y-2">
               <Image
                 src={card.image}
-                width={25}
-                height={25}
+                width={50}
+                height={50}
                 alt={`${card.title} icon`}
                 className=""
               />

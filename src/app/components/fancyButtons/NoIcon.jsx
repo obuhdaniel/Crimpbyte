@@ -3,7 +3,7 @@ import React from "react";
 function NoIcon({ text }) {
   return (
     <div className="flex flex-col items-center gap-[2px]">
-    {/* Top Gradient Line */}
+    
     <svg
       className="w-fit h-[2px]"
       viewBox="0 0 500 10"
@@ -22,11 +22,9 @@ function NoIcon({ text }) {
 
     {/* Icon and Text */}
     <div className="flex items-center gap-2">
-      {/* Icon (Orange Circle with Checkmark) */}
       
 
-      {/* Text */}
-      <span className="text-sm font-opensans">{text}</span>
+    <span className="py-2 text-[14px] md:text-md lg:text-lg font-opensans">{text}</span>
     </div>
 
     {/* Bottom Gradient Line */}

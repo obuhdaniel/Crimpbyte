@@ -55,8 +55,8 @@ function Gitt() {
   }
 
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center bg-black text-white px-5">
-      <div className="flex flex-col gap-4 text-start lg:text-center  md:text-left mb-8 md:mb-0">
+    <div className="flex flex-col md:flex-row justify-between items-center h-fit bg-black text-white px-3">
+      <div className="flex flex-col gap-4 text-start lg:text-center  md:text-left  md:mb-0">
         <span className="font-optima font-semibold text-2xl md:text-5xl">
           Get in Touch Today!
         </span>
@@ -86,34 +86,25 @@ function Gitt() {
         <ValidationError field="email" prefix="Email" errors={state.errors} />
       </div>
 
-      <div className="relative w-full h-fit  ">
-        <div className="absolute h-1/2 top-20 left-0 flex gap-4 ">
+      <div className="relative w-full h-[50vh]  ">
+        <div className="absolute h-fit top-36 md:top-24 left-0 flex gap-4 ">
           {[1, 2, 3].map((star, index) => (
             <div key={index} className="w-full h-full  transform rotate-45">
               <div className="w-full h-full transform -rotate-45">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className="w-full h-full text-orange-950 p-2"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M12 2c.5 0 .9.3 1.1.8l2.3 4.7 5.2.8c.5.1.9.6.8 1.1l-3.8 3.7.9 5.2c.1.5-.4.9-.9.7L12 17.4l-4.7 2.5c-.5.3-1-.1-.9-.7l.9-5.2-3.8-3.7c-.4-.5-.1-1 .8-1.1l5.2-.8 2.3-4.7c.2-.5.6-.8 1.1-.8z"
-                  />
-                </svg>
+               <img src="/star.png" alt="" />
               </div>
             </div>
           ))}
         </div>
 
         <div className="flex justify-end items-end h-full">
-          <div className="relative min-h-max">
+          <div className="absolute bottom-0 right-0 min-h-max">
             <Image
-              src="/gitt.png"
+              src="/gitt2.png"
               alt="Professional"
               objectFit="cover"
               className="rounded-lg"
-              height={100}
+              height={200}
               width={200}
             />
           </div>

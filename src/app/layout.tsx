@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className=''>
+      <body className='overflow-x-hidden mx-auto'>
         <NavBar />
         {children}
         <Footer />

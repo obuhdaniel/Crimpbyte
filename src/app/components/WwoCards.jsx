@@ -14,89 +14,118 @@ function WwoCards() {
           title: "Mobile Application Development",
           content:
             "Crimplyte’s Technology mobile app development services focus on creating high-quality, user-centric applications for both iOS and Android platforms.",
-            image: "/purple-fan.png",
+            image: "/purple.png",
         },
         {
           title: "Web Development",
           content:
             "Crimplyte’s web development services encompass a comprehensive range of offerings to build robust and dynamic websites.",
-            image: "/yellow-fan.png",        },
+            image: "/yellow.png",        },
         {
           title: "UI/UX Design Services",
           content:
             "Crimplyte Technology offers a range of UI/UX design services aimed at creating exceptional user experiences.",
 
-            image: "/orange-fan.png",
+            image: "/orange.png",
         },
         {
           title: "Cloud Computing",
           content:
             "Crimplyte offers cloud computing solutions that enable businesses to scale their operations flexibly and securely.",
-          image: "/purple-fan.png",        
+          image: "/purple.png",        
         },
         {
           title: "Renewable Energy",
           content:
             "We are committed to sustainability, providing consulting and technology solutions in renewable energy.",
 
-          image: "/yellow-fan.png",
+          image: "/yellow.png",
         },
         {
           title: "Artificial Intelligence",
           content:
             "We harness the power of artificial intelligence to create intelligent systems that automate processes.",
 
-          image: "/orange-fan.png",
+          image: "/orange.png",
         },
         {
           title: "Marketing Services",
           content:
             "Crimplyte provides comprehensive marketing solutions designed to increase brand visibility and drive engagement.",
-            image: "/purple-fan.png",
+            image: "/purple.png",
         },
         {
           title: "IoT",
           content:
             "We specialize in developing IoT solutions that connect devices and systems to improve efficiency and data collection.",
 
-          image: "/yellow-fan.png",
+          image: "/yellow.png",
         },
         {
           title: "Precision Agriculture",
           content:
             "Our precision agriculture services leverage technology to enhance farming efficiency.",
 
-          image: "/orange-fan.png",
+          image: "/orange.png",
         },
+        {
+          title: "Software Development",
+          content:
+            "Crimpbyte delivers tailored software development services to meet specific business needs. Our team of developers works on custom applications, ensuring they are robust, scalable, and aligned with industry standards.",
+
+          image: "/purple.png",
+        },
+        {
+          title: "Consultation",
+          content:
+            "We offer expert consultation services to guide businesses in their digital transformation journey. Our consultants assess current practices, identify opportunities for improvement, and provide actionable strategies tailored to each client.",
+
+          image: "/yellow.png",
+        },
+        {
+          title: "Training",
+          content:
+            "Crimpbyte provides training programs designed to empower teams with the latest digital skills. Our training covers various topics, from technology implementation to digital marketing strategies, ensuring clients can effectively leverage new tools and methodologies.",
+
+          image: "/orange.png",
+        },
+        {
+          title: "Maintenance and Support",
+          content:
+            "Crimpbyte offers ongoing maintenance and support services to ensure your digital solutions run smoothly. This includes regular updates, troubleshooting, performance monitoring, and user support to address any issues promptly, keeping your systems secure and efficient.",
+
+          image: "/purple.png",
+        },
+
       ];
     
       return (
         <div className="max-w-7xl mx-auto px-4 py-10 lg:px-8 lg:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {cards.map((card, index) => (
-            <div
-              key={index}
-              className="relative flex flex-col h-full p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow border border-gray-200 hover:border-gray-300"
-            >
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                {card.title}
-              </h3>
-              <p className="text-base text-gray-700 leading-relaxed mb-8 flex-grow">
-                {card.content}
-              </p>
-  
-           
-              <div className="absolute bottom-0 right-0 transform translate-x-8 translate-y-8">
-                <Image
-                  src={card.image}
-                  width={50}
-                  height={50}
-                  alt={`${card.title} icon`}
-                  className=""
-                />
-              </div>
+        {cards.map((card, index) => (
+          <div
+            key={index}
+            className="relative flex w-full flex-col h-full pl-4 pr-5 py-4  bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow border border-gray-200 hover:border-gray-300 opacity-100"
+          >
+            <h3 className=" min-[320px]:text-[16px] text-[18px]  text-start font-medium text-gray-800 ">
+              {card.title}
+            </h3>
+            <p className="text-[18px] text-start text-gray-700 leading-relaxed mb-4 flex-grow">
+              {card.content}
+            </p>
+
+
+            <div className="absolute -bottom-3 right-1 transform translate-x-2 translate-y-2">
+              <Image
+                src={card.image}
+                width={30}
+                height={30}
+                alt={`${card.title} icon`}
+                className=""
+              />
             </div>
-          ))}
+          </div>
+        ))}
         </div>
       </div>
       );

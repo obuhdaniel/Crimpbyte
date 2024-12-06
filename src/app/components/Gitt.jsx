@@ -57,7 +57,7 @@ function Gitt() {
   return (
     <div className="flex flex-col md:flex-row justify-between items-center h-fit bg-black text-white px-3">
       <div className="flex flex-col gap-4 text-start lg:text-center  md:text-left  md:mb-0">
-        <span className="font-optima font-semibold text-2xl md:text-5xl">
+        <span className="font-optima font-semibold text-2xl pt-10 md:text-5xl">
           Get in Touch Today!
         </span>
         <p className="font-opensans font-normal text-[15px] md:text-xl">

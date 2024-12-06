@@ -33,17 +33,13 @@ const portfolioItems = [
 
 function PortfolioLong() {
   return (
-    <div className="flex flex-col items-center text-center py-20 gap-10 bg-black text-white">
-      {/* Section Title */}
-      <NoIcon text="Portfolio" />
-      <h2 className="font-optima text-4xl mb-6">
-        A little exploration into our creativity
-      </h2>
+    <div className="flex flex-col items-center text-center py-5 gap-10 bg-[#f2f2f2] text-white">
+     
 
       {/* Portfolio Items */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full md:w-4/5 mx-auto px-4">
         {portfolioItems.map((item, index) => (
-          <div key={index} className="pt-10 rounded-md bg-[#151515] text-start px-6 flex flex-col justify-between h-full">
+          <div key={index} className="pt-10 rounded-md bg-white text-black text-start px-6 flex flex-col justify-between h-full">
             <div className="flex-grow">
               <span className="font-opensans text-xl font-semibold mb-6 block">
                 {item.title}

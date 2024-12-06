@@ -1,181 +1,105 @@
-'use client'
-
 import React from "react";
-import { 
-  Facebook, 
-  Twitter, 
-  Instagram, 
-  Linkedin, 
-  Youtube,
-  Mail,
-  Phone,
-  MapPin,
-  ExternalLink,
-  ChevronRight
-} from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-
-const SocialIcon = ({ href, icon: Icon, color }) => (
-  <a 
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className={`group relative p-3 rounded-lg transition-all duration-300 hover:bg-white hover:shadow-lg
-      ${color} hover:text-white hover:-translate-y-1`}
-  >
-    <Icon className="w-6 h-6 transition-transform group-hover:scale-110" />
-    <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-      <svg className="w-full h-full" viewBox="0 0 40 40">
-        <circle cx="20" cy="20" r="18" className={`${color} opacity-20`} />
-      </svg>
-    </div>
-  </a>
-);
-
-const QuickLink = ({ href, children }) => (
-  <Link 
-    href={href}
-    className="group flex items-center gap-2 transition-colors duration-200 hover:text-orange-500"
-  >
-    <ChevronRight className="w-4 h-4 opacity-0 -ml-6 transition-all duration-200 group-hover:opacity-100 group-hover:ml-0" />
-    {children}
-  </Link>
-);
-
-const ContactItem = ({ icon: Icon, children }) => (
-  <li className="flex items-start gap-3 group">
-    <Icon className="w-5 h-5 mt-1 text-orange-500 transition-transform duration-200 group-hover:scale-110" />
-    <span className="flex-1">{children}</span>
-  </li>
-);
-
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaYoutube,
+  FaEnvelope,
+  FaPhone,
   
+} from "react-icons/fa";
+import { FaLocationPin } from "react-icons/fa6";
+import Image from "next/image";
+
+function Footer() {
   return (
-    <footer className="relative bg-gradient-to-b from-white to-gray-50 overflow-hidden">
-      {/* Background SVG Patterns */}
-      <div className="absolute inset-0 -z-10 opacity-[0.02]">
-        <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <pattern id="footer-grid" width="10" height="10" patternUnits="userSpaceOnUse">
-            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5" />
-          </pattern>
-          <rect width="100%" height="100%" fill="url(#footer-grid)" />
-        </svg>
+    <div className="flex flex-col text-primaryTextGrey bg-[#F2F2F2]">
+      {/* Social Icons */}
+      <div className="flex flex-wrap justify-center gap-6 my-10 mx-5 bg-white rounded-lg p-5 md:mx-10 md:px-20 md:justify-between">
+        
+        <a href="https://web.facebook.com/profile.php?id=61561635763286">
+        <FaFacebook size={30} className="text-blue-600" />
+        </a>
+        <a href="https://x.com/crimpbyte">
+          <FaTwitter size={30} className="text-blue-400" />
+        </a>
+        <a href="https://www.instagram.com/crimpbyte/?hl=en"><FaInstagram size={30} className="text-pink-500" /></a>
+        
+        <FaLinkedin size={30} className="text-blue-700" />
+        <a href="https://www.youtube.com/channel/UCSJ8O3jfyWtJG7bMddg-_bg/"><FaYoutube size={30} className="text-red-500" /></a>
+        
       </div>
 
-      {/* Social Media Bar */}
-      <div className="w-full max-w-7xl mx-auto px-4 pt-16">
-        <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
-            <SocialIcon 
-              href="https://web.facebook.com/profile.php?id=61561635763286" 
-              icon={Facebook} 
-              color="text-blue-600"
-            />
-            <SocialIcon 
-              href="https://x.com/crimpbyte" 
-              icon={Twitter} 
-              color="text-blue-400"
-            />
-            <SocialIcon 
-              href="https://www.instagram.com/crimpbyte/?hl=en" 
-              icon={Instagram} 
-              color="text-pink-500"
-            />
-            <SocialIcon 
-              href="#" 
-              icon={Linkedin} 
-              color="text-blue-700"
-            />
-            <SocialIcon 
-              href="https://www.youtube.com/channel/UCSJ8O3jfyWtJG7bMddg-_bg" 
-              icon={Youtube} 
-              color="text-red-500"
-            />
+      {/* Footer Sections */}
+      <div className="flex flex-col md:flex-row justify-evenly items-start gap-10 md:gap-0 px-5 md:px-10 py-10">
+        {/* Logo and Branding */}
+        <div className="flex flex-row lg:flex-col md:flex-row items-center gap-4">
+          <div>
+            <Image src="/logo.png" alt="Logo" width={50} height={50} />
+          </div>
+          <div className="flex flex-col items-start text-center md:text-left">
+            <span className="font-opensans text-[#111111] text-lg md:text-[20px] font-semibold">
+              Crimpbyte
+            </span>
+            <span className="font-opensans text-base md:text-[16px]">
+              Innovating for a Sustainable Future
+            </span>
           </div>
         </div>
-      </div>
 
-      {/* Main Footer Content */}
-      <div className="w-full max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
-          {/* Brand Column */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-4">
-              <Image 
-                src="/logo.png" 
-                alt="Crimpbyte Logo" 
-                width={50} 
-                height={50}
-                className="transition-transform hover:scale-105"
-              />
-              <div>
-                <h3 className="text-xl font-bold text-gray-900">Crimpbyte</h3>
-                <p className="text-sm text-gray-600">Innovating for a Sustainable Future</p>
-              </div>
-            </div>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Empowering businesses with cutting-edge technology solutions for a 
-              digital-first world.
-            </p>
-          </div>
+        {/* Quick Links */}
+        <div className="flex flex-col items-start">
+          <span className="font-opensans text-[#111111] mb-4 text-lg md:text-[20px] font-semibold">
+            Quick Links
+          </span>
+          <ul className="list-none flex flex-col gap-2 font-opensans text-base md:text-[16px]">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/services">Services</a>
+            </li>
+            <li>
+              <a href="/portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a href="/about-us">About Us</a>
+            </li>
+            <li>
+              <a href="/contact-us">Contact Us</a>
+            </li>
+          </ul>
+        </div>
 
-          {/* Quick Links Column */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
-            <nav className="space-y-3 pl-6">
-              <QuickLink href="/">Home</QuickLink>
-              <QuickLink href="/services">Services</QuickLink>
-              <QuickLink href="/portfolio">Portfolio</QuickLink>
-              <QuickLink href="/about-us">About Us</QuickLink>
-              <QuickLink href="/contact-us">Contact Us</QuickLink>
-            </nav>
-          </div>
-
-          {/* Contact Info Column */}
-          <div className="lg:col-span-2">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
-            <ul className="space-y-4">
-              <ContactItem icon={Mail}>
-                <a href="mailto:crimpbyte@gmail.com" className="hover:text-orange-500 transition-colors">
-                  crimpbyte@gmail.com
-                </a>
-              </ContactItem>
-              <ContactItem icon={Phone}>
-                <a href="tel:+2349015343134" className="hover:text-orange-500 transition-colors">
-                  +234 9015343134
-                </a>
-              </ContactItem>
-              <ContactItem icon={MapPin}>
-                Department of Computer Engineering,
-                <br />
-                University of Benin, Edo State, NG
-              </ContactItem>
-            </ul>
-          </div>
+        {/* Contact Info */}
+        <div className="flex flex-col items-start">
+          <span className="font-opensans mb-4 text-[#111111] text-lg md:text-[20px] font-semibold">
+            Contact Us
+          </span>
+          <ul className="list-none flex flex-col gap-2 font-opensans text-base md:text-[16px]">
+            <li className="flex items-center gap-2">
+              <FaEnvelope /> crimpbyte@gmail.com
+            </li>
+            <li className="flex items-center gap-2">
+              <FaPhone /> +234 9015343134
+            </li>
+            <li className="flex items-start gap-2">
+              <FaLocationPin /> Department of Computer Engineering,
+              <br />
+              University of Benin, Edo State, NG
+            </li>
+          </ul>
         </div>
       </div>
 
       {/* Footer Bottom */}
-      <div className="border-t border-gray-200">
-        <div className="w-full max-w-7xl mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
-            <p>&copy; {currentYear} Crimpbyte. All rights reserved.</p>
-            <div className="flex gap-6">
-              <Link href="/privacy" className="hover:text-orange-500 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="hover:text-orange-500 transition-colors">
-                Terms of Service
-              </Link>
-            </div>
-          </div>
-        </div>
+      <div className="text-start lg:text-center  md:text-right py-5 text-xs sm:text-sm px-5">
+        &copy; 2024 Crimpbyte. All rights reserved. Privacy Policy | Terms of
+        Service
       </div>
-    </footer>
+    </div>
   );
-};
+}
 
 export default Footer;

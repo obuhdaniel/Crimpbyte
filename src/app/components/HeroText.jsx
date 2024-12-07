@@ -17,10 +17,10 @@ function HeroText() {
       </div>
 
       <div className="w-full max-w-4xl text-center">
-        <h1 className="font-optima max-w-full text-[22px] md:text-5xl leading-tight md:leading-snug">
+        <h1 className="font-optima max-w-full text-[26px] lg:text-[40px] md:text-5xl leading-tight md:leading-snug">
           Transforming industries through <br /> advanced technology solutions
         </h1>
-        <p className="font-opensans text-primaryTextGrey dark:text-gray-100 text-[10px] md:text-xl mt-1 mx-auto w-3/4">
+        <p className="font-opensans text-primaryTextGrey dark:text-gray-100 lg:text-[15px] text-[12px] md:text-xl mt-1 mx-auto w-3/4">
           Empowering Your Brand with Innovative Digital Solutions Tailored to
           Elevate Engagement, Drive Growth, and Achieve your unique Business
           Goals.

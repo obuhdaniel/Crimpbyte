@@ -55,7 +55,7 @@ const ContactSection = () => {
   }
   return (
     <section
-      className="relative bg-white dark:bg-gray-900 pt-12  pl-6  bg-stars-light dark:bg-stars-dark bg-cover bg-center"
+      className="relative bg-white dark:bg-black pt-12 pl-6  bg-stars-light dark:bg-stars-dark bg-cover bg-center"
     >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center space-y-6 md:space-y-0">
         {/* Text Section */}
@@ -67,13 +67,24 @@ const ContactSection = () => {
             Let’s transform your ideas into an outstanding digital experience.
           </p>
           <div className="flex justify-center md:justify-start">
+            <form 
+            onSubmit={handleSubmit}
+
+            >
+
+            </form>
             <input
               type="email"
+              name='email'
+              required
               placeholder="Enter your email"
               className="px-4 py-2 border rounded-l-lg w-72 focus:outline-none focus:ring focus:ring-orange-500"
             />
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-r-lg">
-              Contact Us
+            <button 
+             type="submit"
+             disabled={state.submitting}
+            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-r-lg">
+             {state.submitting ? "Processing..." : "Contact Us"}
             </button>
           </div>
         </div>

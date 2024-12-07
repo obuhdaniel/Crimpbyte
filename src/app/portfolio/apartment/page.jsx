@@ -66,7 +66,7 @@ function PortfolioPage() {
             <ul className="mt-2 space-y-2 list-disc list-inside">
               <li >
                 <span className="font-medium dark:text-[#d8d8d8]"> Personalized Recommendations: </span>
-                 We Implemented a smart recommendation engine that suggests apartments based on users' past behavior, preferences, and search history.
+                 We Implemented a smart recommendation engine that suggests apartments based on users past behavior, preferences, and search history.
               </li>
               <li>
                 <span className="font-medium dark:text-[#d8d8d8]">Streamlined Booking Process:</span> We Simplify the booking flow with minimal steps, allowing users to reserve their chosen apartment quickly and easily

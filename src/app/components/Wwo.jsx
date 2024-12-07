@@ -9,8 +9,8 @@ function Wwo() {
   return (
     <div className="flex flex-col items-center dark:bg-black dark:text-white text-center gap-2 md:gap-8">
       <NoIcon text="Our Services" />
-      <span className="font-optima text-[22px]  md:text-4xl">What We Offer</span>
-      <p className="font-opensans text-[10px] md:text-xl max-w-3xl text-primaryTextGrey mx-auto w-[90%]">
+      <span className="font-optima text-[22px] lg:text-[32px] md:text-4xl">What We Offer</span>
+      <p className="font-opensans text-[15px] md:text-xl max-w-3xl text-primaryTextGrey mx-auto w-[90%]">
         Comprehensive Digital Solutions Designed to Propel Your Business Forward
       </p>
       <WwoCardsSimple />

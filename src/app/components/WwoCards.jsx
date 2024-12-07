@@ -110,7 +110,7 @@ function WwoCards() {
             <h3 className=" text-[18px]  text-start font-medium text-gray-800 dark:text-white lg:text-[24px] ">
               {card.title}
             </h3>
-            <p className="text-[18px] lg:text-[16px] text-start text-[#A5A5A5] leading-relaxed mb-4 flex-grow">
+            <p className="text-[14px] lg:text-[16px] text-start text-[#A5A5A5] leading-relaxed mb-4 flex-grow">
               {card.content}
             </p>
 

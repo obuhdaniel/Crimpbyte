@@ -55,68 +55,48 @@ const ContactSection = () => {
   }
   return (
     <section
-      className="relative bg-white dark:bg-black pt-12 pl-6  bg-stars-light dark:bg-stars-dark bg-cover bg-center"
-    >
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center space-y-6 md:space-y-0">
-        {/* Text Section */}
-        <div className="text-center md:text-left md:w-1/2 lg:mb-24">
-          <h2 className="text-2xl md:text-4xl font-bold font-optima dark:text-black text-white mb-4">
-            Get in Touch Today!
-          </h2>
-          <p className="text-gray-600 font-opensans dark:text-[#444444] mb-6">
-            Let’s transform your ideas into an outstanding digital experience.
-          </p>
-          <div className="flex justify-center md:justify-start">
-            <form 
-            onSubmit={handleSubmit}
-
-            >
-
-            </form>
-            <input
-              type="email"
-              name='email'
-              required
-              placeholder="Enter your email"
-              className="px-4 py-2 border rounded-l-lg w-72 focus:outline-none focus:ring focus:ring-orange-500"
-            />
-            <button 
-             type="submit"
-             disabled={state.submitting}
-            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-r-lg">
-             {state.submitting ? "Processing..." : "Contact Us"}
-            </button>
-          </div>
-        </div>
-
-        {/* Image Section */}
-        <div className="md:w-1/2 hidden lg:flex justify-center h-2/3">
-          <div className="relative">
-            <Image
-              src="/gitt2.png" // Replace with your image path
-              alt="Professional woman"
-              width={300}
-              height={400}
-              className="rounded-md"
-            />
-          </div>
-          
-        </div>
-        {/* Image Section */}
-        <div className="md:w-1/2 flex justify-center h-2/3 lg:hidden">
-          <div className="relative">
-            <Image
-              src="/gitt2.png" // Replace with your image path
-              alt="Professional woman"
-              width={200}
-              height={300}
-              className="rounded-md"
-            />
-          </div>
-          
+    className="relative bg-white dark:bg-black pt-12 px-6 bg-stars-light dark:bg-stars-dark bg-cover bg-center"
+  >
+    <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-12">
+      {/* Text Section */}
+      <div className="text-center lg:text-left lg:w-1/2">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-optima text-white dark:text-black mb-4">
+          Get in Touch Today!
+        </h2>
+        <p className="text-gray-700 text-[18px] font-opensans dark:text-gray-400 mb-6">
+          Let’s transform your ideas into an outstanding digital experience.
+        </p>
+        <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center sm:items-stretch">
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="Enter your email"
+            className="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-t-lg sm:rounded-t-none sm:rounded-l-lg w-full sm:w-72 focus:outline-none focus:ring focus:ring-orange-500 mb-4 sm:mb-0"
+          />
+          <button
+            type="submit"
+            disabled={state.submitting}
+            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-b-lg sm:rounded-b-none sm:rounded-r-lg transition duration-200 disabled:opacity-70 disabled:cursor-not-allowed"
+          >
+            {state.submitting ? "Processing..." : "Contact Us"}
+          </button>
         </div>
       </div>
-    </section>
+  
+      {/* Image Section */}
+      <div className="lg:w-1/2 flex justify-center lg:justify-end">
+        <Image
+          src="/gitt2.png" // Replace with your image path
+          alt="Professional woman"
+          width={300}
+          height={400}
+          className="rounded-md object-cover w-[200px] h-[300px] sm:w-[300px] sm:h-[400px]"
+        />
+      </div>
+    </div>
+  </section>
+  
   );
 };
 

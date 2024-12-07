@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function HeroText() {
   return (
-    <div className="min-h-screen w-full dark:bg-black dark:text-white flex flex-col items-center py-10 md:py-16 gap-4 dark:bg-hero-dark bg-cover bg-center">
+    <div className="w-full dark:bg-black dark:text-white flex flex-col items-center py-10 gap-4 dark:bg-hero-dark bg-cover bg-center">
       <div className="w-full max-w-5xl px-6 md:px-10">
         <div className="flex flex-wrap justify-between gap-2">
           <WithIcon text="UI/UX Designs" style="border-orange-500" stroke="orange" />

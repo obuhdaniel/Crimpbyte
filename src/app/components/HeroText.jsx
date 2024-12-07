@@ -6,7 +6,7 @@ import Image from "next/image";
 function HeroText() {
   return (
     <div className="w-full dark:bg-black dark:text-white flex flex-col items-center py-10 gap-4 dark:bg-hero-dark bg-cover bg-center">
-      <div className="w-full max-w-5xl px-6 md:px-10">
+      <div className="w-full max-w-5xl px-6 hidden lg:block md:px-10">
         <div className="flex flex-wrap justify-between gap-2">
           <WithIcon text="UI/UX Designs" style="border-orange-500" stroke="orange" />
           <WithIcon text="Software Development" style="border-purple-500" stroke="purple" />
@@ -31,7 +31,7 @@ function HeroText() {
       <OrangeButton buttonText="Get a Quote" />
 
       {/* Bottom Icons Section */}
-      <div className="w-full max-w-5xl px-6 md:px-10 ">
+      <div className="w-full max-w-5xl px-6 hidden lg:block md:px-10 ">
       <div className="flex justify-center mt-4">
           <WithIcon text="IOT" style="border-orange-500" stroke="orange" />
         </div>

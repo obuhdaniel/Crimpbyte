@@ -25,7 +25,7 @@ const WwoCardsSimple = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-10 lg:px-8 lg:py-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8">
         {cards.map((card, index) => (
           <div
             key={index}
@@ -39,11 +39,11 @@ const WwoCardsSimple = () => {
             </p>
 
 
-            <div className="absolute -bottom-3 right-1 transform translate-x-2 translate-y-2">
+            <div className="absolute -bottom-8 right-1 transform translate-x-2 translate-y-2">
               <Image
                 src={card.image}
-                width={30}
-                height={30}
+                width={60}
+                height={60}
                 alt={`${card.title} icon`}
                 className=""
               />

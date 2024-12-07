@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 function Wcu() {
   return (
-    <div className='flex flex-col items-center text-center py-10 gap-2'>
+    <div className='flex flex-col dark:text-white text-primaryTextGrey dark:bg-black items-center text-center py-10 gap-2'>
         <NoIcon
         text="Why choose Us"
         />

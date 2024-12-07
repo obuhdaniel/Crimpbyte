@@ -14,9 +14,9 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <div className="flex flex-col text-primaryTextGrey bg-[#F2F2F2]">
+    <div className="flex flex-col text-primaryTextGrey bg-[#F2F2F2] dark:bg-black">
       {/* Social Icons */}
-      <div className="flex flex-row justify-center gap-4 sm:gap-8 md:gap-10 lg:gap-14 my-10 mx-5 bg-white rounded-lg p-5 md:mx-10 md:px-10 md:justify-between">
+      <div className="flex flex-row justify-center gap-4 sm:gap-8 md:gap-10 lg:gap-10 my-10 mx-5 dark:bg-[#151515] dark:border-[#6D6D6D] border-1 bg-white rounded-lg p-5 md:mx-10 md:px-10  lg:px-20 md:justify-between">
         
         <a href="https://web.facebook.com/profile.php?id=61561635763286">
         <FaFacebook size={30} className="text-blue-600" />
@@ -34,15 +34,15 @@ function Footer() {
       {/* Footer Sections */}
       <div className="flex flex-col md:flex-row justify-evenly items-start gap-10  md:gap-0 px-5 md:px-10 py-10">
         {/* Logo and Branding */}
-        <div className="flex flex-row lg:flex-col md:flex-row items-center gap-4">
-          <div>
+        <div className="flex flex-row  md:flex-row items-center lg:items-start gap-4 align-middle">
+          <div className="dark:bg-white dark:rounded-full p-2">
             <Image src="/logo.png" alt="Logo" width={50} height={50} />
           </div>
           <div className="flex flex-col items-start text-center md:text-left">
-            <span className="font-opensans text-[#111111] text-lg md:text-[20px] font-semibold">
+            <span className="font-opensans text-[#111111] dark:text-white text-lg md:text-[20px] font-semibold">
               Crimpbyte
             </span>
-            <span className="font-opensans text-base md:text-[16px]">
+            <span className="font-opensans text-base dark:text-[#A5A5A5] md:text-[16px]">
               Innovating for a Sustainable Future
             </span>
           </div>
@@ -50,10 +50,10 @@ function Footer() {
 
         {/* Quick Links */}
         <div className="flex flex-col items-start">
-          <span className="font-opensans text-[#111111] mb-4 text-lg md:text-[20px] font-semibold">
+          <span className="font-opensans text-[#111111] dark:text-white mb-4 text-lg md:text-[20px] font-semibold">
             Quick Links
           </span>
-          <ul className="list-none flex flex-col gap-2 font-opensans text-base md:text-[16px]">
+          <ul className="list-none flex flex-col gap-2 font-opensans dark:text-[#A5A5A5] text-base md:text-[16px]">
             <li>
               <a href="/">Home</a>
             </li>
@@ -74,10 +74,10 @@ function Footer() {
 
         {/* Contact Info */}
         <div className="flex flex-col items-start">
-          <span className="font-opensans mb-4 text-[#111111] text-lg md:text-[20px] font-semibold">
+          <span className="font-opensans mb-4 text-[#111111] text-lg dark:text-white md:text-[20px] font-semibold">
             Contact Us
           </span>
-          <ul className="list-none flex flex-col gap-2 font-opensans text-base md:text-[16px]">
+          <ul className="list-none flex flex-col gap-2 font-opensans text-base dark:text-[#A5A5A5] md:text-[16px]">
             <li className="flex items-center gap-2">
               <FaEnvelope /> crimpbyte@gmail.com
             </li>

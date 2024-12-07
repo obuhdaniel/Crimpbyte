@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function HeroText() {
   return (
-    <div className="min-h-screen w-full flex flex-col items-center py-10 md:py-16 gap-4">
+    <div className="min-h-screen w-full dark:bg-black dark:text-white flex flex-col items-center py-10 md:py-16 gap-4 dark:bg-hero-dark bg-cover bg-center">
       <div className="w-full max-w-5xl px-6 md:px-10">
         <div className="flex flex-wrap justify-between gap-2">
           <WithIcon text="UI/UX Designs" style="border-orange-500" stroke="orange" />
@@ -20,7 +20,7 @@ function HeroText() {
         <h1 className="font-optima max-w-full text-[22px] md:text-5xl leading-tight md:leading-snug">
           Transforming industries through <br /> advanced technology solutions
         </h1>
-        <p className="font-opensans text-primaryTextGrey text-[10px] md:text-xl mt-1 mx-auto w-3/4">
+        <p className="font-opensans text-primaryTextGrey dark:text-gray-100 text-[10px] md:text-xl mt-1 mx-auto w-3/4">
           Empowering Your Brand with Innovative Digital Solutions Tailored to
           Elevate Engagement, Drive Growth, and Achieve your unique Business
           Goals.
@@ -42,9 +42,24 @@ function HeroText() {
         
       </div>
 
-      <div className="flex flex-wrap justify-center gap-6 my-3 mx-5 bg-white h-6 w-3/4 rounded-lg p-5 md:mx-10 md:px-20 md:justify-between"></div>
+      <div className="flex flex-wrap justify-center gap-6 my-3 mx-5 dark:bg-[#151515] bg-white h-6 w-3/4 rounded-lg p-5 md:mx-10 md:px-20 md:justify-between"></div>
 
-      <Image src="/line.png" width="1500" height="0" alt="" className="my-3" />
+      <div className="">
+  <Image 
+    src="/line.png" 
+    width={1500} 
+    height={0} 
+    alt="decorative line" 
+    className="block dark:hidden"
+  />
+  <Image 
+    src="/line2.png" 
+    width={1500} 
+    height={0} 
+    alt="decorative line" 
+    className="hidden dark:block"
+  />
+</div>
     </div>
   );
 }

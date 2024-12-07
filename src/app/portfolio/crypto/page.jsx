@@ -1,16 +1,17 @@
 import React from "react";
-import Gitt from "../../components/Gitt";
+import ContactSection from "../../components/gittlarge";
 import PortfolioLong from "../../components/PortfolioLong";
 
 function PortfolioPage() {
   return (
     <>
-      <div className="flex flex-col lg:flex-row items-start w-full mx-auto p-6 bg-[#F2F2F2] space-y-4 ">
+      <div className="bg-[#F2F2F2] dark:bg-black text-gray-700 dark:text-[#A5A5A5]">
+      <div className="flex flex-col lg:flex-row items-start w-full mx-auto p-6 space-y-4 ">
         <div>
-          <h1 className=" font-optima text-[24px] font-bold text-gray-800">
+          <h1 className=" font-optima text-[24px] font-bold text-gray-800 dark:text-white">
             A Cryptocurrency Exchange mobile application{" "}
           </h1>
-          <p className="text-gray-700 font-opensans text-[15px] leading-relaxed">
+          <p className="font-opensans text-[15px] leading-relaxed">
             Koin is a cutting-edge cryptocurrency exchange mobile application
             designed to simplify the buying, selling, and trading of digital
             assets. As the cryptocurrency market continues to grow, so does the
@@ -29,12 +30,12 @@ function PortfolioPage() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row-reverse lg:justify-items-center items-start w-full mx-auto p-6 bg-[#F2F2F2] space-y-4">
+      <div className="flex flex-col lg:flex-row-reverse lg:justify-items-center items-start w-full mx-auto p-6  space-y-4">
         <div className="lg:pt-20">
-          <h1 className=" font-optima text-[24px] font-bold text-gray-800">
+          <h1 className=" font-optima text-[24px] font-bold text-gray-800 dark:text-white">
             The Problem Statement
           </h1>
-          <p className="text-gray-700 font-opensans text-[15px] leading-relaxed">
+          <p className=" font-opensans text-[15px] leading-relaxed">
          The cryptocurrency market is often perceived as complex and intimidating, particularly for new users. Many existing exchange platforms have cumbersome interfaces, overwhelming amounts of information, and security concerns, which can deter potential users from engaging with the platform. Additionally, the lack of educational resources and support can leave users feeling lost, hindering their trading experience and overall satisfaction</p>
         </div>
         <div className="w-full flex flex-col items-center">
@@ -46,9 +47,9 @@ function PortfolioPage() {
       </div>
 
 
-      <div className="flex flex-col lg:flex-row items-start  mx-auto p-6 bg-[#F2F2F2] space-y-4">
+      <div className="flex flex-col lg:flex-row items-start  mx-auto p-6  space-y-4">
         <div>
-          <h1 className=" font-optima text-[24px] font-bold text-gray-800">
+          <h1 className=" font-optima text-[24px] font-bold text-gray-800 dark:text-white">
             Solution
           </h1>
           <div>
@@ -86,8 +87,9 @@ function PortfolioPage() {
           </div>
         </div>
       </div>
+      </div>
 
-      <Gitt />
+      <ContactSection />
     </>
   );
 }

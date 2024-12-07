@@ -1,5 +1,5 @@
 import React from 'react'
-
+import ContactSection from '../components/gittlarge';
 
 import HeroText from "../components/HeroText";
 import Wwo from "../components/Wwo";
@@ -27,7 +27,8 @@ function LandingPage() {
       <Wcu/>
       
       <Portfolio/>
-      <Gitt/>
+      <ContactSection/>
+      
       
         
     </div>

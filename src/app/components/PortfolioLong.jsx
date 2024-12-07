@@ -39,36 +39,61 @@ const portfolioItems = [
 
 function PortfolioLong() {
   return (
-    <div className="flex flex-col items-center text-center py-5 gap-10 bg-[#f2f2f2] text-white">
-     
-
-      {/* Portfolio Items */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full md:w-4/5 mx-auto px-4">
+    <div className="bg-[#f2f2f2] dark:bg-black py-16 px-4 md:px-8 lg:px-16">
+    {/* Portfolio Items Grid */}
+    <div className="max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
         {portfolioItems.map((item, index) => (
-          <div key={index} className="pt-10 rounded-md bg-white text-black text-start px-6 flex flex-col justify-between h-full">
-            <div className="flex-grow">
-              <span className="font-opensans text-xl font-semibold mb-6 block">
-                {item.title}
-              </span>
-              <Link href={item.link}>
-              <OrangeButton buttonText="View Case Study" className="my-4" />
-              </Link>
-            </div>
-            <div className="mt-4">
+          <div 
+            key={index} 
+            className="group bg-white dark:bg-[#151515] rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden"
+          >
+            {/* Image Section */}
+            <div className="relative h-64 lg:h-72 overflow-hidden">
               <Image
                 src={item.image}
-                width={400}
-                height={200}
+                width={800}
+                height={600}
                 alt={item.alt}
-                className="rounded-lg object-cover w-full"
-                priority={index < 2} // Prioritize loading for first items
+                className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500"
+                priority={index < 2}
                 loading={index < 2 ? "eager" : "lazy"}
               />
+            </div>
+  
+            {/* Content Section */}
+            <div className="p-6 lg:p-8">
+              <div className="flex flex-col h-full">
+                <h3 className="font-opensans text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  {item.title}
+                </h3>
+                
+                {/* Optional description if you want to add one */}
+                {item.description && (
+                  <p className="text-gray-600 dark:text-gray-300 mb-6 line-clamp-3">
+                    {item.description}
+                  </p>
+                )}
+  
+                {/* Button */}
+                <div className="mt-auto">
+                  <Link 
+                    href={item.link}
+                    className="inline-block w-full"
+                  >
+                    <OrangeButton 
+                      buttonText="View Case Study" 
+                      className="w-full text-center justify-center hover:opacity-90 transition-opacity duration-200"
+                    />
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         ))}
       </div>
     </div>
+  </div>
   );
 }
 

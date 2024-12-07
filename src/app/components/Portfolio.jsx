@@ -27,7 +27,10 @@ function Portfolio() {
           </span>
           <div className="flex flex-col items-start">
             <div className="my-4">
+              <Link href='/portfolio/crypto'>
+              
               <OrangeButton buttonText="View Case Study" />
+              </Link>
             </div>
             <div>
               <Image
@@ -48,7 +51,8 @@ function Portfolio() {
           </span>
           <div className="flex flex-col items-start">
             <div className="my-4">
-              <OrangeButton buttonText="View Case Study" />
+            <Link href='/portfolio/apartment'>
+              <OrangeButton buttonText="View Case Study" /></Link>
             </div>
             <div>
               <Image

@@ -2,32 +2,38 @@ import React from 'react';
 import NoIcon from "./fancyButtons/NoIcon";
 import OrangeButton from "./yellow";
 import Image from "next/image";
+import Link from "next/link";
 
 const portfolioItems = [
   {
     title: 'A cryptocurrency exchange mobile application',
     image: '/koin3.png',
-    alt: 'cryptocurrency app'
+    alt: 'cryptocurrency app',
+    link: '/portfolio/crypto'
   },
   {
     title: 'An Apartment booking mobile application',
     image: '/booking2.png',
-    alt: 'apartment booking app'
+    alt: 'apartment booking app',
+    link: '/portfolio/apartment'
   },
   {
     title: 'Homify: An IoT mobile app UI',
     image: '/homify2.png',
-    alt: 'IoT app UI'
+    alt: 'IoT app UI',
+    link: '/portfolio/iot'
   },
   {
     title: 'Social Media Chat UI',
     image: '/socio.png',
-    alt: 'social media chat UI'
+    alt: 'social media chat UI',
+    link: '/portfolio/chat'
   },
   {
     title: 'Fintech Mobile UI Screen',
     image: '/fintech.png',
-    alt: 'fintech UI'
+    alt: 'fintech UI',
+    link: '/portfolio/bank'
   }
 ];
 
@@ -44,7 +50,9 @@ function PortfolioLong() {
               <span className="font-opensans text-xl font-semibold mb-6 block">
                 {item.title}
               </span>
+              <Link href={item.link}>
               <OrangeButton buttonText="View Case Study" className="my-4" />
+              </Link>
             </div>
             <div className="mt-4">
               <Image

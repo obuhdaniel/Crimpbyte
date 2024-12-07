@@ -22,9 +22,9 @@ function WithIcon({text, style, stroke}) {
 
     {/* Icon and Text */}
     <div className="flex items-center gap-2">
-      <div className={`w-2 h-2 border-[1px] rounded-full flex items-center justify-center ${style || ''}`}>
+      <div className={`w-2 h-2 lg:w-4 lg:h-4 border-[1px] rounded-full flex items-center justify-center ${style || ''}`}>
         <svg
-          className={`w-1 h-1 bordeer-[1px]`}
+          className={`w-1 h-1 lg:w-3 lg:h-3 bordeer-[1px]`}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="none"

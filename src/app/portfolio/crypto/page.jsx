@@ -35,8 +35,7 @@ function PortfolioPage() {
             The Problem Statement
           </h1>
           <p className="text-gray-700 font-opensans text-[15px] leading-relaxed">
-          The current landscape of apartment booking apps is often fragmented and overwhelming for users. Many platforms present users with a plethora of choices but lack intuitive navigation, leading to frustration during the search and booking process. Additionally, concerns around trust and transparency—such as unclear pricing, hidden fees, and insufficient property information—can deter users from committing to bookings. As a result, travelers frequently miss out on great accommodations that fit their needs.          </p>
-          
+         The cryptocurrency market is often perceived as complex and intimidating, particularly for new users. Many existing exchange platforms have cumbersome interfaces, overwhelming amounts of information, and security concerns, which can deter potential users from engaging with the platform. Additionally, the lack of educational resources and support can leave users feeling lost, hindering their trading experience and overall satisfaction</p>
         </div>
         <div className="w-full flex flex-col items-center">
           <div className="w-1/4 h-1/4 lg:w-1/2 lg:h-1/2">
@@ -47,23 +46,22 @@ function PortfolioPage() {
       </div>
 
 
-      <div className="flex flex-col lg:flex-row items-start w-full mx-auto p-6 bg-[#F2F2F2] space-y-4">
+      <div className="flex flex-col lg:flex-row items-start  mx-auto p-6 bg-[#F2F2F2] space-y-4">
         <div>
           <h1 className=" font-optima text-[24px] font-bold text-gray-800">
             Solution
           </h1>
           <div>
             <h2 className="text-xl font-semibold">
-              1. User Friendly Interface (UI):
+              1. Intuitive User Interface (UI):
             </h2>
             <ul className="mt-2 space-y-2 list-disc list-inside">
               <li>
-                <span className="font-medium">Simple Navigation:</span>  Crimpbyte Designed a clean, intuitive interface that allows users to effortlessly browse, filter, and select apartments based on their preferences, such as location, price, and amenities.
+                <span className="font-medium">Streamlined Design:</span>  Develop a clean and straightforward interface that prioritizes essential features, allowing users to navigate easily without feeling overwhelmed.
               </li>
               <li>
-                <span className="font-medium">Visual Appeal:</span>
-                Utilized high-quality images and engaging visuals to showcase properties, enhancing the appeal of listings and making them more inviting.
-              </li>
+                <span className="font-medium">Personalized Dashboard:</span>
+                Create a customizable dashboard where users can see their preferred assets, trading pairs, and market trends at a glance.              </li>
             </ul>
           </div>
           <div>
@@ -72,11 +70,11 @@ function PortfolioPage() {
             </h2>
             <ul className="mt-2 space-y-2 list-disc list-inside">
               <li>
-                <span className="font-medium"> Personalized Recommendations:</span>
-                We Implemented a smart recommendation engine that suggests apartments based on users' past behavior, preferences, and search history.
+                <span className="font-medium"> Onboarding Process:</span>
+                Implement a guided onboarding experience for new users, introducing them to the app’s features and functionalities step-by-step.
               </li>
               <li>
-                <span className="font-medium">Streamlined Booking Process:</span>We Simplify the booking flow with minimal steps, allowing users to reserve their chosen apartment quickly and easily
+                <span className="font-medium">Contextual Help:</span>Offer tooltips and contextual help throughout the app to assist users as they trade or explore different features.
               </li>
             </ul>
           </div>

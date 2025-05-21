@@ -36,7 +36,7 @@ function Footer() {
         {/* Logo and Branding */}
         <div className="flex flex-row  md:flex-row items-center lg:items-start gap-4 align-middle">
           <div className="dark:bg-white dark:rounded-full p-2">
-            <Image src="/logo.png" alt="Logo" width={50} height={50} />
+            <Image src="/logo3.png" alt="Logo" width={50} height={50} />
           </div>
           <div className="flex flex-col items-start text-center md:text-left">
             <span className="font-opensans text-[#111111] dark:text-white text-lg md:text-[20px] font-semibold">
@@ -95,7 +95,7 @@ function Footer() {
 
       {/* Footer Bottom */}
       <div className="text-start lg:text-center  md:text-right py-5 text-xs sm:text-sm px-5">
-        &copy; 2024 Crimpbyte. All rights reserved. Privacy Policy | Terms of
+        &copy; 2025 Crimpbyte. All rights reserved. Privacy Policy | Terms of
         Service
       </div>
     </div>

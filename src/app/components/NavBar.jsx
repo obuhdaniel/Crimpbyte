@@ -29,7 +29,7 @@ function NavBar() {
         {/* Logo */}
         <div className="flex-shrink-0 dark:bg-white p-[1px] rounded-full">
           <Image 
-            src='/logo.png' 
+            src='/logo3.png' 
             alt='Logo' 
             width={40} 
             height={40} 
